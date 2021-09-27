@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const LeaderSchema = new Schema({
+const TaskSchema = new Schema({
     _id:Number,
     name:{
         fName:{type:String, required:true},
@@ -9,14 +9,14 @@ const LeaderSchema = new Schema({
         fLastName:String,
         sLastName:String
     },
-    movil:Number,
-    email:String,
-    proyect:[{type:Number}],
-    time:[Number]
+    career:String,
+    movil:{type:Number, required:true},
+    inProyect:[Date],
+    proyect:[{type:Number}]
 },{
     versionKey: false
 })
 
-const Leader = mongoose.model('Leader', LeaderSchema);
+const student = mongoose.model('Student', TaskSchema);
 
-module.exports = Leader;
+module.exports = student;
