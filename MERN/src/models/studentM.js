@@ -10,13 +10,13 @@ const TaskSchema = new Schema({
         sLastName:String
     },
     career:String,
-    movil:Number,
+    movil:{type:Number, required:true},
     inProyect:[Date],
     proyect:[{type:Number}]
 },{
     versionKey: false
 })
 
-const Student = mongoose.model('Student', TaskSchema);
+const student = mongoose.model('Student', TaskSchema);
 
-module.exports = Student;
+module.exports = student;

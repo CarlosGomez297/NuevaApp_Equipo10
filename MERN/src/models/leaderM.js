@@ -9,7 +9,7 @@ const LeaderSchema = new Schema({
         fLastName:String,
         sLastName:String
     },
-    movil:Number,
+    movil:{type:Number, required:true},
     email:String,
     proyect:[{type:Number}],
     time:[Number]
@@ -17,6 +17,6 @@ const LeaderSchema = new Schema({
     versionKey: false
 })
 
-const Leader = mongoose.model('Leader', LeaderSchema);
+const leader = mongoose.model('Leader', LeaderSchema);
 
-module.exports = Leader;
+module.exports = leader;
