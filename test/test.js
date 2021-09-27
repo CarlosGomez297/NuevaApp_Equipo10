@@ -1,9 +1,10 @@
 var expect = require('chai').expect
 
-var user = require('../src/models/usersM');
-var project = require('../src/models/proyectM');
-var student = require('../src/models/studentM');
-var leader = require('../src/models/leaderM');
+var user = require('../models/usersM');
+var project = require('../models/proyectM');
+var student = require('../models/studentM');
+var leader = require('../models/leaderM');
+
 
 describe('#dbModel test their validations', function(){
 
